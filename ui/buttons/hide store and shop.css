@@ -1,0 +1,5 @@
+/* Hides Store and Shop button */
+[href="/store"],
+[href="/shop"] {
+  display: none;
+}

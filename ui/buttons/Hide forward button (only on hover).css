@@ -1,0 +1,8 @@
+/* Hide forward button (only on hover) */
+#message-actions-forward {
+    display: none;
+}
+
+div[aria-label="Forward"] {
+    display: none;
+}

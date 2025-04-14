@@ -1,0 +1,4 @@
+/* Hide sticker picker button */
+button[aria-label="Open sticker picker"] {
+    display: none;
+}
