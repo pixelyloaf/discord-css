@@ -1,0 +1,8 @@
+/* oldish user panel */
+.visual-refresh section.panels_c48ade {
+    margin-left: var(--custom-guild-list-width);
+    width: calc(100% - var(--space-xs)*2 - var(--custom-guild-list-width)) !important;
+    .actionButtons_e131a9 button {
+      padding: 0;
+    }
+  }
