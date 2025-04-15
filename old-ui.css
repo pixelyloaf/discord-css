@@ -1,6 +1,6 @@
 /* Old UI */
 /* Hide Refresh Title Bar */
-@import url('https://raw.githubusercontent.com/surgedevs/visual-refresh-compact-title-bar/refs/heads/main/desktop.css');
+@import url('https://raw.githubusercontent.com/surgedevs/visual-refresh-compact-title-bar/refs/heads/main/hidden.css');
 :root {
     /* controls the vertical position of the window buttons */
     --vr-header-snippet-top: 0x !important;
