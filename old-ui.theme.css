@@ -1,341 +1,11 @@
 /* Old UI */
-/* Hide Refresh Title Bar */
-@import url('https://raw.githubusercontent.com/surgedevs/visual-refresh-compact-title-bar/refs/heads/main/hidden.css');
-:root {
-    /* controls the vertical position of the window buttons */
-    --vr-header-snippet-top: 0x !important;
-    /* controls the space above the server list */
-    --vr-header-snippet-server-padding: 16px !important;
-    /* controls the space the window buttons get on the channel header, experiment around with this if you get gaps or the buttons overlap! */
-    --vr-header-snippet-space: 250px !important;
-}
-/* Revert visual refresh server list */
-:root {
-  --guildbar-avatar-size: 48px;
-  --blob-scale: 48;
-
-  --guildbar-folder-size: var(--guildbar-avatar-size);
-  --folder-blob-scale: var(--blob-scale);
-
-  --custom-guild-list-padding: calc((72px - var(--guildbar-avatar-size)) / 2);
-}
-
-.visual-refresh nav[class*="guilds_"] {
-  /* Uncomment if you changed up your nameplate */
-  /* margin: 0;
-  [class*="sidebar_"]::after {
-      height: 0;
-  } */
-
-  defs>path {
-      /* #svg-mask-squircle */
-      d: path("M0 0.464C0 0.301585 0 0.220377 0.0316081 0.158343C0.0594114 0.103776 0.103776 0.0594114 0.158343 0.0316081C0.220377 0 0.301585 0 0.464 0H0.536C0.698415 0 0.779623 0 0.841657 0.0316081C0.896224 0.0594114 0.940589 0.103776 0.968392 0.158343C1 0.220377 1 0.301585 1 0.464V0.536C1 0.698415 1 0.779623 0.968392 0.841657C0.940589 0.896224 0.896224 0.940589 0.841657 0.968392C0.779623 1 0.698415 1 0.536 1H0.464C0.301585 1 0.220377 1 0.158343 0.968392C0.103776 0.940589 0.0594114 0.896224 0.0316081 0.841657C0 0.779623 0 0.698415 0 0.536V0.464Z");
-  }
-
-  defs {
-      width: var(--guildbar-avatar-size);
-      height: var(--guildbar-avatar-size);
-  }
-
-  [class*="childWrapper__"]>svg {
-      width: calc(var(--guildbar-avatar-size) - 18px);
-      height: calc(var(--guildbar-avatar-size) - 18px);
-  }
-
-  [class*="iconSizeMini_"] {
-      width: calc(var(--guildbar-folder-size) / 3);
-      height: calc(var(--guildbar-folder-size) / 3);
-
-      [class*="acronym_"] {
-          line-height: calc(var(--guildbar-folder-size) / 3);
-      }
-
-      &[style*="font-size: 12px;"] {
-          font-size: 10px !important;
-      }
-      &[style*="font-size: 10px;"] {
-          font-size: 7px !important;
-      }
-      &[style*="font-size: 8px;"] {
-          font-size: 6px !important;
-      }
-  }
-
-  [class*="childWrapper__"],
-  [class*="childWrapper__"] img,
-  [class*="icon_"],
-  [class*="circleIconButton__"] {
-      border-radius: 50% !important;
-      transition: border-radius 150ms linear;
-  }
-
-  [class*="selected__"] {
-      [class*="childWrapper__"],
-      [class*="childWrapper__"] img,
-      [class*="icon_"],
-      &[class*="circleIconButton__"] {
-          border-radius: 27% !important;
-      }
-  }
-
-  svg[class*="placeholderMask__"] {
-      width: var(--guildbar-avatar-size);
-      height: var(--guildbar-avatar-size);
-  }
-
-  svg:not([class*="placeholderMask__"]) {
-      top: 0px;
-      left: 0px;
-
-      foreignObject {
-          width: var(--guildbar-avatar-size);
-          height: var(--guildbar-avatar-size);
-          transform: translate(-4px, -4px);
-      }
-  }
-
-  mask {
-      --badge-offset: calc(var(--guildbar-avatar-size) - 40px);
-
-
-      use[href$="-lower_badge_masks"] {
-          translate: var(--badge-offset) var(--badge-offset);
-      }
-
-      use[href$="-upper_badge_masks"] {
-          translate: var(--badge-offset);
-      }
-
-      use[href$="-blob_mask"] {
-          scale: var(--blob-scale);
-      }
-  }
-
-  [class*="folderIcon__"] {
-      use {
-          translate: none !important;
-
-          &[href$="-blob_mask"] {
-              scale: var(--folder-blob-scale) !important;
-          }
-      }
-
-      [class*="wrapper_"],
-      foreignObject {
-          width: var(--guildbar-folder-size) !important;
-          height: var(--guildbar-folder-size) !important;
-      }
-  }
-
-  [class*="closedFolderIconWrapper__"] {
-      gap: initial;
-  }
-
-  [class*="listItem__"] {
-      margin-bottom: 8px;
-  }
-
-  [class*="stack_"] {
-      gap: 0 !important;
-  }
-
-  div:not([class]):has([class*="listItem__"]) {
-      height: var(--guildbar-avatar-size) !important;
-      margin: 8px 0 8px;
-  }
-
-  [class*="isExpanded__"] {
-      [class*="folder__"] {
-          background-color: var(--background-secondary);
-      }
-
-      [class*="expandedFolderBackground__"] {
-          border-radius: 24px;
-      }
-
-      [class*=expandedFolderIconWrapper__] {
-          svg {
-              width: calc(var(--guildbar-folder-size)/2);
-              height: calc(var(--guildbar-folder-size)/2);
-          }
-          margin: 0;
-          transition: background-color var(--custom-folder-item-animation-duration) ease-out; /* 150ms */
-      }
-
-      [class*="stack_"] {
-          height: auto !important;
-          :last-child {
-              margin-bottom: 0;
-          }
-      }
-
-      margin-bottom: 8px;
-  }
-
-  [id^="folder-items-"] {
-      --guildbar-avatar-size: var(--guildbar-folder-size) !important;
-  }
-}
-
-:root {
-  /* You can change the size but only to be less than 48px, you must change the blob scale too*/
-  --guildbar-avatar-size: 48px;
-  --blob-scale: 48;
-
-  --guildbar-folder-size: var(--guildbar-avatar-size);
-  --folder-blob-scale: var(--blob-scale);
-}
-
-/* Visual Refresh Seamless Chat Bar */
-:root {
-  /* Custom padding for the chat box */
-  --rscb-chat-box-padding: 8px;
-}
-
-.visual-refresh .form_f75fb0 {
-  display: flex;
-  flex-direction: column;
-  padding: 4px var(--rscb-chat-box-padding) var(--rscb-chat-box-padding)
-    var(--rscb-chat-box-padding) !important;
-  /* Normal chatbar */
-  .channelTextArea_f75fb0 {
-    margin-bottom: 0px;
-    margin-right: 1px;
-    /* reply bar */
-    .stackedBars__74017 {
-      border-bottom-color: transparent !important;
-      background-color: var(--chat-background-default);
-    }
-  }
-  /* slowmode bar + typing indicator */
-  .base_b88801 {
-    border-color: transparent !important;
-    position: static;
-    order: -1;
-    background: transparent !important;
-    background-image: transparent !important;
-    border: 1px solid var(--border-faint);
-    border-bottom: none;
-    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-    .typing_b88801 {
-      border-color: transparent !important;
-    }
-    .typingDots_b88801,
-    .cooldownText_b21699 {
-      background-color: var(--chat-background-default);
-      height: 24px;
-      padding-right: 8px;
-      padding-left: 8px;
-      border-radius: 8px 8px 0 0;
-      border: 1px solid var(--border-faint) !important;
-      border-bottom-color: transparent !important;
-      /* because they dont have the same position */
-      &.typingDots_b88801 {
-        transform: translateX(-1px);
-        &:not(:has(span > strong)) {
-          display: none !important;
-        }
-      }
-      &.cooldownText_b21699 {
-        transform: translateY(1px);
-      }
-    }
-  }
-  .channelAttachmentArea_b77158 {
-    background-color: var(--chat-background-default);
-  }
-  /* the stars of the show, the :has */
-  /* check for typing thing */
-  &:has(> .typing_b88801 > .typingDots_b88801 > span > strong)
-    .channelTextArea_f75fb0 {
-    border-top-left-radius: 0 !important;
-  }
-  /* check for cooldown thing */
-  &:has(> .typing_b88801 > .cooldownWrapper_b21699) .channelTextArea_f75fb0 {
-    border-top-right-radius: 0 !important;
-  }
-}
-:root {
-    /* change padding of the bar */
-     --rscb-chat-box-padding: 8px; /* default is 8px for alignment */
-}
-/* revert user area */
-.visual-refresh section.panels_c48ade {
-  margin-left: var(--custom-guild-list-width);
-  width: calc(100% - var(--space-xs)*2 - var(--custom-guild-list-width)) !important;
-  .actionButtons_e131a9 button {
-    padding: 0;
-  }
-}
-nav.guilds_c48ade {
-  margin-bottom: 0 !important;
-}
-/* optionally hide the bar at bottom of server list */
-/* chat alerts at top */
-:root {
-  /* Set to 1 if you want them to float  *\
-  |*      Recommended while using        *|
-  \*      Midnight/Rounded Themes        */
-  --craat-popout: 0; /* Default = 0 */
-  /* Change the border radius *\
-  \*      for the alerts      */
-  --craat-border-radius: 16px; /* default: 16px */
-}
-
-.visual-refresh .chatContent_f75fb0 .messagesWrapper__36d07 {
-  .jumpToPresentBar__0f481 {
-    width: calc(100% - 16px) !important;
-    min-width: unset !important;
-    left: 0px !important;
-    top: calc(8px * var(--craat-popout)) !important;
-    bottom: unset !important;
-    border-radius: calc(var(--craat-border-radius) * var(--craat-popout))
-      calc(var(--craat-border-radius) * var(--craat-popout))
-      var(--craat-border-radius) var(--craat-border-radius);
-    z-index: 5 !important;
-  }
-
-  .newMessagesBar__0f481 {
-    border: 1px solid var(--border-normal);
-    background-color: var(--background-surface-highest) !important;
-    padding-top: 4px !important;
-    border-radius: calc(var(--craat-border-radius) * var(--craat-popout))
-      calc(var(--craat-border-radius) * var(--craat-popout))
-      var(--craat-border-radius) var(--craat-border-radius);
-    top: calc(8px * var(--craat-popout)) !important;
-    left: 8px !important;
-    right: 8px !important;
-    > button:not([aria-label*="message"]) {
-      background-color: var(--button-filled-brand-background);
-      height: 22px;
-      padding: 0 16px;
-      font-weight: 500 !important;
-      font-size: small;
-      transform: translateX(2px);
-      text-align: center;
-      border: 1px solid var(--button-filled-brand-border);
-      color: var(--button-filled-brand-text);
-      margin-right: 6px;
-      &:hover {
-        background-color: var(--button-filled-brand-background-hover);
-        border: 1px solid var(--button-filled-brand-border);
-      }
-    }
-    > button[aria-label*="message"] > span {
-      color: white;
-    }
-    ~ .jumpToPresentBar__0f481 {
-      top: calc(36px + (8px * var(--craat-popout))) !important;
-      border-top-color: transparent !important;
-      border-radius: 0 0 var(--craat-border-radius) var(--craat-border-radius);
-    }
-    &:has(~ .jumpToPresentBar__0f481) {
-      border-radius: calc(var(--craat-border-radius) * var(--craat-popout))
-        calc(var(--craat-border-radius) * var(--craat-popout)) 0 0;
-      border-bottom-color: transparent !important;
-    }
-  }
-}
+/* visual refresh (titlebar thing) import */
+@import url('https://raw.githubusercontent.com/surgedevs/visual-refresh-compact-title-bar/refs/heads/main/desktop.css');
+/* revert servers */
+@import url("https://scattagain.github.io/VencordStuff/css/GuildbarRevert.css");
+/* chat related alerts at top */
+@import url(https://nspc911.github.io/themes/vencord/ChatRelatedAlertsAtTop.theme.css);
+/* chat related alerts at top settings */
 :root {
     /* Set to 1 if you want them to float  *\
     |*      Recommended while using        *|
@@ -345,6 +15,72 @@ nav.guilds_c48ade {
     \*      for the alerts      */
     --craat-border-radius: 16px; /* default: 16px */
 }
-.sidebar_c48ade:after {
-  display: none;
+/* revert servers config */
+:root {
+    /* Revert icon sizes and blob scales */
+    --guildbar-avatar-size: 48px;
+    --blob-scale: 48;
+
+    --guildbar-folder-size: var(--guildbar-avatar-size);
+    --folder-blob-scale: var(--blob-scale);
+}
+/* oldish user panel */
+.visual-refresh section.panels_c48ade {
+  margin-left: var(--custom-guild-list-width);
+  width: calc(100% - var(--space-xs)*2 - var(--custom-guild-list-width)) !important;
+  .actionButtons_e131a9 button {
+    padding: 0;
+  }
+}
+/* fix oldish user panel overwriting servers ui */
+.visual-refresh nav:has([data-list-id="guildsnav"]) {
+  margin-bottom: unset;
+}
+/* ui stuff for window actions config */
+:root {
+    /* controls the vertical position of the window buttons */
+    --vr-header-snippet-top: 0px !important;
+    /* controls the space above the server list */
+    --vr-header-snippet-server-padding: 10px !important;
+    /* controls the space the window buttons get on the channel header, experiment around with this if you get gaps or the buttons overlap! */
+    --vr-header-snippet-space: 108px !important;
+}
+/* Aligned Chat Box and Typing indicator config */
+.container_c48ade {
+  --custom-chat-input-margin-bottom: 22px;
+}
+:root {
+  --custom-channel-textarea-text-area-height: 42px;
+}
+.visual-refresh .base_b88801 {
+  font-size: 13.5px;
+  height: 22px;
+  display: flex !important;
+  align-items: center !important;
+}
+/* ai stuff */
+div.winButtons_c38106.winButtonsWithDivider_c38106 {
+  display: none !important;
+}
+/* Increase right padding on the base container */
+/* Add extra right margin to the Help button anchor */
+a.anchor_edefb8.anchorUnderlineOnHover_edefb8 {
+  margin-right: 20px !important;
+}
+/* ai stuff end here */
+/* fix chatbar spacing and icons */
+.visual-refresh .scrollerInner__36d07 {
+    padding-bottom: 5px;
+}
+
+.visual-refresh .membersWrap_c8ffbb .membersGroup_c8ffbb {
+    padding-bottom: 10px;
+}
+
+.visual-refresh .button__74017,.buttonContents_e6e74f:not([class*="enabled__67645"]) {
+    transform: scale(1.25) !important;
+}
+
+.visual-refresh .spriteContainer__04eed {
+   transform: scale(1.1) !important;
 }
