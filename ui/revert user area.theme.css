@@ -1,12 +1,28 @@
-/* revert user area*/
-.visual-refresh section[aria-label="User area"] {
-    width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + 1px);;
-    left: var(--custom-guild-list-width);
-    bottom: 0px;
-    border-radius: 0px;
-    border: none;
+/* revert user area */
+.visual-refresh section.panels_c48ade {
+  left: calc(var(--custom-guild-list-width));
+  width: calc(100% - calc(var(--custom-guild-list-width)));
+  bottom: 0;
+  border-radius: 0;
+  border: none;
+  border-top: 1px solid var(--border-faint);
+  /* Fix vc buttons resizing weirdly */
+  .actionButtons_e131a9 button {
+    padding: 0;
+  }
+  .activityPanel_c48ade {
+    border-radius: inherit;
+  }
 }
-
-.visual-refresh nav:has([data-list-id="guildsnav"]) {
-  margin-bottom: unset;
+nav.guilds_c48ade, #channels {
+  margin-bottom: 0 !important;
+}
+/* optionally hide the bar at bottom of server list */
+.sidebar_c48ade:after {
+  display: none;
+}
+/* Better Folders Fix */
+.visual-refresh [style$="grid-area: betterFoldersSidebar;"]~section.panels_c48ade {
+  left: calc(var(--custom-guild-list-width)*2);
+  width: calc(100% - var(--custom-guild-list-width)*2) !important;
 }
