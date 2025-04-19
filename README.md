@@ -5,6 +5,6 @@ all of these are mostly gonna be in the vencord server you can join that [here](
 
 if anybody that owns these wants me to remove it contact me on discord (loaf0002) most likely already share a server though
 
-themes featured
+# themes featured
 
 Oldcord: [milbits/oldcord](https://github.com/milbits/oldcord)
