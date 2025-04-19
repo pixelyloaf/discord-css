@@ -56,6 +56,11 @@ div.winButtons_c38106.winButtonsWithDivider_c38106 {
 a.anchor_edefb8.anchorUnderlineOnHover_edefb8 {
   margin-right: 20px !important;
 }
+/* Slightly round all buttons with the common class structure */
+/* More scoped: only targets buttons inside the action buttons container */
+.actionButtons_e131a9 .button_e131a9 {
+  border-radius: 4px;
+}
 /* ai stuff end here */
 /* fix chatbar spacing and icons */
 .visual-refresh .scrollerInner__36d07 {
@@ -100,6 +105,10 @@ nav.guilds_c48ade, #channels {
 .visual-refresh [style$="grid-area: betterFoldersSidebar;"]~section.panels_c48ade {
   left: calc(var(--custom-guild-list-width)*2);
   width: calc(100% - var(--custom-guild-list-width)*2) !important;
+}
+/* fix small dm space being cut off */
+div[class^=sidebar__] div[class^=scroller__] {
+  margin-bottom: unset !important;
 }
 /* detailed timestamp */
 span[class*="timestampInline_"] time::before {
