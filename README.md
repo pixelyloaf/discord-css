@@ -14,5 +14,5 @@ tldr; broken, wont work on it but pull requests accepted
 
 ## Oldcord: [milbits/oldcord](https://github.com/milbits/oldcord)
 
-## Old UI [pixelyloaf/discord-css](https://github.com/pixelyloaf/discord-css)
+## Old UI: [pixelyloaf/discord-css](https://github.com/pixelyloaf/discord-css)
 
