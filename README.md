@@ -3,7 +3,7 @@ idk i use most of these
 
 all of these are mostly gonna be in the vencord server you can join that [here](https://discord.gg/4Ds9QfGn87) i dont know if github supports this but im keeping it
 
-if anybody that owns these wants me to remove it contact me on discord (loaf0002) most likely already share a server though
+if anybody that owns these wants me to remove it contact me on discord (loaf0002) or github issue most likely already share a server though so you can ignore the friend request
 # Stylish support?
 i have tried getting it working, except the servers seem to be gone and the titlebar is still there
 
