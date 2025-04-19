@@ -7,5 +7,5 @@
 ==/UserStyle== */
 
 @-moz-document domain("discord.com") {
-  @import url("https://raw.githubusercontent.com/pixelyloaf/discord-css/main/old-ui.theme.css");
+  /* No import for testing */
 }
