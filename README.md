@@ -12,4 +12,7 @@ if anyone knows how to fix i'd be happy to accept it (please i barely know what 
 tldr; wont work on it but accepts pull requests
 # themes featured
 
-Oldcord: [milbits/oldcord](https://github.com/milbits/oldcord)
+## Oldcord: [milbits/oldcord](https://github.com/milbits/oldcord)
+
+## Old UI [pixelyloaf/discord-css](https://github.com/pixelyloaf/discord-css)
+
