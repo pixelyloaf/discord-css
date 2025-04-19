@@ -9,7 +9,7 @@ i have tried getting it working, except the servers seem to be gone and the titl
 
 if anyone knows how to fix i'd be happy to accept it (please i barely know what im doing)
 
-tldr; wont work on it but accepts pull requests
+tldr; broken, wont work on it but pull requests accepted
 # themes featured
 
 ## Oldcord: [milbits/oldcord](https://github.com/milbits/oldcord)
