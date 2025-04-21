@@ -24,7 +24,8 @@ i dont really use this so if anyone can say how i'd appreciate that
 ```css
 @import url("https://raw.githubusercontent.com/pixelyloaf/discord-css/refs/heads/experimental/old-ui.theme.css");
 ```
-# Stylish support?
+
+# Stylus support?
 i have tried getting it working, except the servers seem to be gone and the titlebar is still there
 
 if anyone knows how to fix i'd be happy to accept it (please i barely know what im doing)
