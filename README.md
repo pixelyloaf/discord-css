@@ -6,7 +6,8 @@ all of these are mostly gonna be in the vencord server you can join that [here](
 if anybody that owns these wants me to remove it contact me on discord (loaf0002) or github issue most likely already share a server though so you can ignore the friend request
 # Install guide
 ## Vencord
-work in progress
+### Local
+1. use the file i provided in releases or download the rawq one (you wont see it until i finish setting stuff up in experimental)
 
 ## BetterDiscord
 work in progress
