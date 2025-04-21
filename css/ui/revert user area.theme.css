@@ -1,3 +1,7 @@
+/* 
+ORIGINAL BY evie (evie.flowers)
+FIXES BY Obsidian (obsidianninja11)
+*/
 /* revert user area */
 .visual-refresh section.panels_c48ade {
   left: calc(var(--custom-guild-list-width));
