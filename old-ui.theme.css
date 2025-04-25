@@ -48,14 +48,7 @@
   align-items: center !important;
 }
 /* ai stuff */
-div.winButtons_c38106.winButtonsWithDivider_c38106 {
-  display: none !important;
-}
-/* Increase right padding on the base container */
-/* Add extra right margin to the Help button anchor */
-a.anchor_edefb8.anchorUnderlineOnHover_edefb8 {
-  margin-right: 20px !important;
-}
+
 /* Slightly round all buttons with the common class structure */
 /* More scoped: only targets buttons inside the action buttons container */
 .actionButtons_e131a9 .button_e131a9 {
