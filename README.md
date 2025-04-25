@@ -13,7 +13,14 @@ if anybody that owns these wants me to remove it contact me on discord (loaf0002
 work in progress
 
 ## Import/QuickCSS
-i could do this right now but i'll wait until i finish the others
+### Main
+```css
+@import url("https://raw.githubusercontent.com/pixelyloaf/discord-css/refs/heads/main/old-ui.theme.css");
+```
+### Experimental
+```css
+@import url("https://raw.githubusercontent.com/pixelyloaf/discord-css/refs/heads/experimental/old-ui.theme.css");
+```
 
 # Stylish support?
 i have tried getting it working, except the servers seem to be gone and the titlebar is still there
