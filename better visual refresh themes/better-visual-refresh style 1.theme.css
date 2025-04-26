@@ -1,5 +1,7 @@
 /* imports */
 @import url("https://raw.githubusercontent.com/KrstlSkll69/vc-snippets/main/SyncedWithGameRecolor.css");
+/* seamless chat bar */
+@import url("https://nspc911.github.io/themes/vencord/RefreshedSeamlessChatBar.theme.css");
 /* settings */
 .title_c38106 {
   display: none;
