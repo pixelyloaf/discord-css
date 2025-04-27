@@ -1,4 +1,5 @@
 /* imports */
+/* game colour sync */
 @import url("https://raw.githubusercontent.com/KrstlSkll69/vc-snippets/main/SyncedWithGameRecolor.css");
 /* seamless chat bar */
 @import url("https://nspc911.github.io/themes/vencord/RefreshedSeamlessChatBar.theme.css");
@@ -145,3 +146,4 @@ width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2);
 padding: calc(var(--custom-guild-list-padding) / 2);
 }
 }
+/* test */

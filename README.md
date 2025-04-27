@@ -11,6 +11,7 @@ if anybody that owns these wants me to remove it contact me on discord (loaf0002
 if you're on the experimental branch this wont work you can probably find out manually though
 
 ### Online
+uhh i'll set this up later
 
 ## BetterDiscord
 i dont really use this so if anyone can say how i'd appreciate that
@@ -37,3 +38,4 @@ tldr; broken, wont work on it but pull requests accepted
 
 ## Old UI: [pixelyloaf/discord-css](https://github.com/pixelyloaf/discord-css)
 
+## Better Visual Refresh: [pixelyloaf/discord-css](https://github.com/pixelyloaf/discord-css)
