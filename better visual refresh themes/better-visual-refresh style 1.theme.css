@@ -1,0 +1,149 @@
+/* imports */
+/* game colour sync */
+@import url("https://raw.githubusercontent.com/KrstlSkll69/vc-snippets/main/SyncedWithGameRecolor.css");
+/* seamless chat bar */
+@import url("https://nspc911.github.io/themes/vencord/RefreshedSeamlessChatBar.theme.css");
+/* settings */
+.title_c38106 {
+  display: none;
+}
+
+.title_f75fb0 {
+  padding: 0px !important;
+  /* scale: 0.9; */
+  padding-left: 12px !important;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  background: transparent !important;
+  height: var(--custom-app-top-bar-height) !important;
+  min-height: 0px;
+  border: none !important;
+  width: calc(100vw);
+}
+
+.followButton_f75fb0,
+.topicClickTarget__6ec1a {
+  -webkit-app-region: no-drag !important;
+}
+
+.base_c48ade:has(.bar_c38106[data-windows="true"]) .title_f75fb0 {
+  width: calc(100vw - 240px)!important;
+}
+
+.children__9293f::after {
+  background: linear-gradient(to right, transparent 0, var(--bg-base-tertiary) 100%)!important;
+}
+.topic__6ec1a {
+  flex: none;
+}
+/* rahh i forgot */
+.visual-refresh section.panels_c48ade {
+  left: calc(var(--custom-guild-list-width) + var(--space-xs));
+  width: calc(100% - var(--custom-guild-list-width) - var(--space-xs)*2);
+  box-sizing: content-box;
+
+  .actionButtons_e131a9 button {
+    padding: 0;
+  }
+
+  /* GameActivityToggle Fix (delete if you don't use) */
+.container__37e49 {
+    padding: var(--space-xxs);
+    gap: var(--space-4);
+    >.buttons__37e49 {
+      gap: 0;
+    }
+    >.avatarWrapper__37e49 {
+      min-width: 32px !important;
+      >.avatar__37e49 {
+        scale: 0.9;
+      }
+    }
+  }
+}
+nav.guilds_c48ade {
+  margin-bottom: 0 !important;
+}
+.sidebar_c48ade:after {
+  display: none;
+}
+/* BetterFolders fix (delete if you don't use) */
+.visual-refresh [style$="grid-area: betterFoldersSidebar;"]~section.panels_c48ade {
+  left: calc(var(--custom-guild-list-width)*2  + var(--space-xs));
+  width: calc(100% - var(--custom-guild-list-width)*2 - var(--space-xs)*2 ) !important;
+}
+/* custom guild icon size */
+.visual-refresh {
+--size: 48; /* visual refresh is 40, old discord is 48. */
+--guildbar-avatar-size: calc(var(--size) * 1px);
+--guildbar-folder-size: var(--g-48);
+--g-48: calc(var(--guildbar-avatar-size) + 8px);
+--g-19-r: calc((var(--size) / 2 - 1) / var(--size) * 40px);
+--g-40-r: calc(var(--guildbar-avatar-size) / (var(--size) + 8) * 48);
+--g-48-r: calc(var(--guildbar-avatar-size) * 48 / 40);
+--g-56-r: calc(var(--g-48) * 56 / 48);
+--g-4-r: calc((var(--g-48-r) - var(--guildbar-avatar-size)) / -2);
+--g-4-r-2: calc((var(--g-56-r) - var(--g-48)) / -2);
+
+.folderIcon__48112 > .wrapper_cc5dd2 {
+width: var(--g-48) !important;
+height: var(--g-48) !important;
+}
+.folderIcon__48112 > .wrapper_cc5dd2 > .svg_cc5dd2 {
+width: var(--g-56-r);
+height: var(--g-56-r);
+top: var(--g-4-r-2);
+left: var(--g-4-r-2);
+}
+.folderIcon__48112 > .wrapper_cc5dd2 > .svg_cc5dd2 > foreignObject {
+width: calc();
+}
+.svg_cc5dd2 {
+width: var(--g-48-r);
+height: var(--g-48-r);
+top: var(--g-4-r);
+left: var(--g-4-r);
+}
+.wrapper__6e9f8,
+.icon__6e9f8,
+.childWrapper__6e9f8 {
+width: 40px;
+height: 40px;
+}
+.folder__48112,
+.folderIconWrapper__48112 {
+width: 48px;
+height: 48px;
+}
+.expandedFolderIconWrapper__48112 {
+width: var(--g-40-r);
+height: var(--g-40-r);
+margin: 0;
+}
+.closedFolderIconWrapper__48112 {
+width: var(--g-40-r);
+height: var(--g-40-r);
+}
+.guildIcon__48112 {
+width: var(--g-19-r);
+height: var(--g-19-r);
+}
+.stack_dbd263 {
+height: auto !important;
+padding-bottom: 4px !important;
+}
+.tutorialContainer__1f388 .svg_cc5dd2 > mask > use:last-child {
+display: none;
+}
+.tutorialContainer__1f388 .numberBadge__2b1f5 {
+outline: 2px solid var(--bg-base-tertiary);
+border-radius: 50%;
+}
+.unreadMentionsIndicatorBottom_ef3116,
+.unreadMentionsIndicatorTop_ef3116 {
+width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2);
+padding: calc(var(--custom-guild-list-padding) / 2);
+}
+}
+/* test */
